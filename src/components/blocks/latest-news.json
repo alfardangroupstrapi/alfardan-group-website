@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_blocks_latest_news",
+  "info": {
+    "displayName": "Latest News",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "buttonLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button-link"
+    }
+  }
+}

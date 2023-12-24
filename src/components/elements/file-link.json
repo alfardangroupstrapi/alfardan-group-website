@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_elements_file_links",
+  "info": {
+    "displayName": "File Attachment Link",
+    "icon": "folder",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "Attachment": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "linkType": {
+      "type": "enumeration",
+      "enum": [
+        "Primary",
+        "Primary Outline",
+        "Secondary",
+        "Secondary Outline",
+        "Link"
+      ]
+    }
+  }
+}

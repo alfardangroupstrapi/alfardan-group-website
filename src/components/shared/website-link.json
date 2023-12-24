@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_website_links",
+  "info": {
+    "displayName": "Website Link",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "websiteURL": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    }
+  }
+}

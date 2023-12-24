@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_elements_icon_with_text_links",
+  "info": {
+    "displayName": "Vision Mission Grid Item",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 130
+    }
+  }
+}

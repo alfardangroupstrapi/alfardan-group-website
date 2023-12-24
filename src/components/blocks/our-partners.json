@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_blocks_our_partners",
+  "info": {
+    "displayName": "Our Partners"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    }
+  }
+}

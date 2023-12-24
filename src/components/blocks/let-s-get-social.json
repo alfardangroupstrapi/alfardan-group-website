@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_blocks_let_s_get_socials",
+  "info": {
+    "displayName": "Let’s Get Social"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    }
+  }
+}

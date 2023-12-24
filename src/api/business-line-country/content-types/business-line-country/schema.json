@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "business_line_countries",
+  "info": {
+    "singularName": "business-line-country",
+    "pluralName": "business-line-countries",
+    "displayName": "Business Line Country",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "pluginOptions": {},
+      "required": true,
+      "unique": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Name",
+      "required": true
+    },
+    "Arabic_Name": {
+      "type": "string"
+    }
+  }
+}

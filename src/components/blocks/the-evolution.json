@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_blocks_the_evolutions",
+  "info": {
+    "displayName": "The Evolution",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "sectionBgImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "primary_navigations",
+  "info": {
+    "singularName": "primary-navigation",
+    "pluralName": "primary-navigations",
+    "displayName": "Primary Navigation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "parentTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "menuLinks": {
+      "type": "dynamiczone",
+      "components": [
+        "navigation.menu-item",
+        "navigation.menu-button-link",
+        "navigation.social-media"
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_section_facts",
+  "info": {
+    "displayName": "Facts",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.fact"
+    }
+  }
+}

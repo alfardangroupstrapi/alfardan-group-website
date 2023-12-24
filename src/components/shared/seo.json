@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_shared_seos",
+  "info": {
+    "displayName": "SEO",
+    "icon": "manyWays",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string",
+      "maxLength": 60,
+      "required": true,
+      "unique": false
+    },
+    "metaDescription": {
+      "type": "text",
+      "maxLength": 160,
+      "minLength": 50,
+      "required": true,
+      "unique": false
+    },
+    "metaImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "keywords": {
+      "type": "text"
+    },
+    "canonicalURL": {
+      "type": "string"
+    }
+  }
+}

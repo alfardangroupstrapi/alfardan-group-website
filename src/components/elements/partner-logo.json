@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_elements_partner_logos",
+  "info": {
+    "displayName": "Partner Logo"
+  },
+  "options": {},
+  "attributes": {
+    "Logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "webLink": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "string"
+    }
+  }
+}

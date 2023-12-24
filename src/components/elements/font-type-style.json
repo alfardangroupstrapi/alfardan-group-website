@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_elements_font_type_styles",
+  "info": {
+    "displayName": "Font Type Style"
+  },
+  "options": {},
+  "attributes": {
+    "fontTypeStyle": {
+      "type": "enumeration",
+      "enum": [
+        "Light",
+        "Regular",
+        "Bold"
+      ]
+    }
+  }
+}

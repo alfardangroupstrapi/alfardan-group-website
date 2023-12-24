@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_elements_time_line_contents",
+  "info": {
+    "displayName": "Time Line Desc Row",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "descText": {
+      "type": "string"
+    },
+    "fontTypeStyle": {
+      "type": "enumeration",
+      "enum": [
+        "Light",
+        "Regular",
+        "Bold"
+      ],
+      "default": "Regular"
+    }
+  }
+}

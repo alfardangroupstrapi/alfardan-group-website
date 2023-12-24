@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "child_line_of_businesses",
+  "info": {
+    "singularName": "child-line-of-business",
+    "pluralName": "child-line-of-businesses",
+    "displayName": "Child Line of Business",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "lineOfBusiness": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::alfardan-business.alfardan-business"
+    },
+    "businessLineCountry": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::business-line-country.business-line-country"
+    },
+    "socialMediaLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navigation.social-media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "websiteLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.website-link",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "fullDescription": {
+      "type": "blocks",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "websiteLinks": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.website-link"
+    }
+  }
+}

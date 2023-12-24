@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "alfardan_businesses",
+  "info": {
+    "singularName": "alfardan-business",
+    "pluralName": "alfardan-businesses",
+    "displayName": "Parent Line of Businesses",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "fullDescription": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "blocks"
+    },
+    "businessLineCountries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::business-line-country.business-line-country"
+    },
+    "socialMediaLinks": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "navigation.social-media"
+    },
+    "websiteLink": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.website-link"
+    },
+    "websiteLinks": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.website-link"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_elements_scholarship_programs",
+  "info": {
+    "displayName": "Tariqi",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "buttonLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button-link"
+    }
+  }
+}

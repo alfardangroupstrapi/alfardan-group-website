@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_elements_business_line_countries",
+  "info": {
+    "displayName": "Business Line Countries",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "businessLineCountry": {
+      "type": "enumeration",
+      "enum": [
+        "Qatar",
+        "Saudi Arabia",
+        "Oman"
+      ],
+      "default": "Qatar"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "titleSubtitle": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "comapnyDetails": {
+      "displayName": "Company Details",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.company-details"
+    }
+  }
+}

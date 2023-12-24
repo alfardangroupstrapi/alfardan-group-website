@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_elements_line_of_businesses",
+  "info": {
+    "displayName": "Line of Businesses List",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "lineOfBusinessesList": {
+      "type": "enumeration",
+      "enum": [
+        "Jewellery",
+        "Properties",
+        "Exchange",
+        "Investment",
+        "Automotive",
+        "Marine Services",
+        "Hospitality",
+        "Medical"
+      ]
+    }
+  }
+}

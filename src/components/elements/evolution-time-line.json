@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_evolution_time_lines",
+  "info": {
+    "displayName": "Time Line Item",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Year": {
+      "type": "biginteger",
+      "min": "4"
+    },
+    "Description": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.time-line-content"
+    }
+  }
+}

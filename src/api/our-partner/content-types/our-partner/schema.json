@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "our_partners",
+  "info": {
+    "singularName": "our-partner",
+    "pluralName": "our-partners",
+    "displayName": "Our Partner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "partnerItem": {
+      "displayName": "Partner Logo",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.partner-logo",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

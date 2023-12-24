@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_navigation_menu_button_links",
+  "info": {
+    "displayName": "Menu Button Link",
+    "icon": "server",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "URL": {
+      "type": "string"
+    },
+    "Target": {
+      "type": "enumeration",
+      "enum": [
+        "_self",
+        "_blank"
+      ],
+      "default": "_self",
+      "required": false
+    },
+    "buttonStyle": {
+      "type": "enumeration",
+      "enum": [
+        "Primary",
+        "Primary Outline",
+        "Secondary",
+        "Secondary Outline",
+        "Link"
+      ],
+      "default": "Primary Outline"
+    }
+  }
+}

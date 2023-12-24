@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_blocks_content_blocks",
+  "info": {
+    "displayName": "Content Block",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "primaryTitle": {
+      "type": "string"
+    },
+    "SecondaryTitle": {
+      "type": "text"
+    },
+    "fullDescription": {
+      "type": "blocks"
+    },
+    "featuredImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

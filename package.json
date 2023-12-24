@@ -1,0 +1,37 @@
+{
+  "name": "alfardan-group",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "license": "MIT",
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "scripts": {
+    "build": "strapi build",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@ckeditor/strapi-plugin-ckeditor": "^0.0.10",
+    "@strapi/plugin-cloud": "4.16.0",
+    "@strapi/plugin-i18n": "4.16.0",
+    "@strapi/plugin-users-permissions": "4.16.0",
+    "@strapi/strapi": "4.16.0",
+    "better-sqlite3": "8.6.0",
+    "pg": "^8.11.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "5.3.4",
+    "strapi-plugin-slugify": "^2.3.8",
+    "styled-components": "5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "fd40ee75-6a0d-45cd-aadf-cf5b9f82526a"
+  }
+}
