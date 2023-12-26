@@ -20,6 +20,9 @@ const populate = {
   lineOfBusiness: {
     populate: true,
   },
+  businessLineCountry: {
+    populate: true,
+  },
 };
 
 module.exports = (config, { strapi }) => {

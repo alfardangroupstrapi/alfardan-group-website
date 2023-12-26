@@ -1715,6 +1715,30 @@ export interface ApiSiteConfigurationSiteConfiguration
   };
 }
 
+export interface ApiTestTest extends Schema.SingleType {
+  collectionName: 'tests';
+  info: {
+    singularName: 'test';
+    pluralName: 'tests';
+    displayName: 'Test';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Desc: Attribute.Blocks;
+    Img: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::test.test', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::test.test', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTheGroupTheGroup extends Schema.SingleType {
   collectionName: 'the_groups';
   info: {
@@ -1806,6 +1830,7 @@ declare module '@strapi/types' {
       'api::primary-navigation.primary-navigation': ApiPrimaryNavigationPrimaryNavigation;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::site-configuration.site-configuration': ApiSiteConfigurationSiteConfiguration;
+      'api::test.test': ApiTestTest;
       'api::the-group.the-group': ApiTheGroupTheGroup;
     }
   }
