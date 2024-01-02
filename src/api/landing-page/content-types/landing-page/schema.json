@@ -46,16 +46,6 @@
       },
       "component": "blocks.ceo-message"
     },
-    "pageSEO": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "shared.seo"
-    },
     "vmShortLinks": {
       "type": "component",
       "repeatable": true,
@@ -136,6 +126,16 @@
         }
       },
       "component": "blocks.explore-our-line-of-businesses"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.seo"
     }
   }
 }

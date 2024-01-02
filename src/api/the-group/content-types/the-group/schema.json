@@ -4,7 +4,8 @@
   "info": {
     "singularName": "the-group",
     "pluralName": "the-groups",
-    "displayName": "The Group"
+    "displayName": "The Group",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -40,6 +41,16 @@
         }
       },
       "component": "elements.button-link"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.seo"
     }
   }
 }

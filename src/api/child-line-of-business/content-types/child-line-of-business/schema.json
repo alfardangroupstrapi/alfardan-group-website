@@ -44,16 +44,6 @@
         }
       }
     },
-    "websiteLink": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.website-link",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "fullDescription": {
       "type": "blocks",
       "pluginOptions": {
@@ -71,6 +61,16 @@
         }
       },
       "component": "shared.website-link"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.seo"
     }
   }
 }

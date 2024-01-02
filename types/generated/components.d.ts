@@ -194,7 +194,7 @@ export interface ElementsFact extends Schema.Component {
   attributes: {
     Icon: Attribute.Media;
     Number: Attribute.BigInteger;
-    Description: Attribute.String;
+    Description: Attribute.Text;
   };
 }
 
@@ -379,7 +379,7 @@ export interface SharedSeo extends Schema.Component {
         minLength: 50;
         maxLength: 160;
       }>;
-    metaImage: Attribute.Media & Attribute.Required;
+    metaImage: Attribute.Media;
     keywords: Attribute.Text;
     canonicalURL: Attribute.String;
   };
