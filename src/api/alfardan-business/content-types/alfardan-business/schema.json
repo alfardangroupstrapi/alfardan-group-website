@@ -47,16 +47,6 @@
       },
       "component": "navigation.social-media"
     },
-    "websiteLink": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "shared.website-link"
-    },
     "websiteLinks": {
       "type": "component",
       "repeatable": true,
@@ -66,6 +56,16 @@
         }
       },
       "component": "shared.website-link"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.seo"
     }
   }
 }

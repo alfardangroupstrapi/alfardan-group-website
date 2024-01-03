@@ -807,71 +807,6 @@ export interface PluginSlugifySlug extends Schema.CollectionType {
   };
 }
 
-export interface ApiAboutUsAboutUs extends Schema.SingleType {
-  collectionName: 'about_uses';
-  info: {
-    singularName: 'about-us';
-    pluralName: 'about-uses';
-    displayName: 'About Us';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    Title: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    Description: Attribute.Blocks &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    featuredImage: Attribute.Media &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    SecondaryTitle: Attribute.Text &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::about-us.about-us',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::about-us.about-us',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    localizations: Attribute.Relation<
-      'api::about-us.about-us',
-      'oneToMany',
-      'api::about-us.about-us'
-    >;
-    locale: Attribute.String;
-  };
-}
-
 export interface ApiAboutUsChildAboutUsChild extends Schema.CollectionType {
   collectionName: 'about_us_children';
   info: {
@@ -910,12 +845,18 @@ export interface ApiAboutUsChildAboutUsChild extends Schema.CollectionType {
     featuredImage: Attribute.Media &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     Additional_Block: Attribute.DynamicZone<
       ['elements.file-attachment-links', 'elements.profile-figure-item']
     > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    seo: Attribute.Component<'shared.seo'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -986,13 +927,13 @@ export interface ApiAlfardanBusinessAlfardanBusiness
           localized: true;
         };
       }>;
-    websiteLink: Attribute.Component<'shared.website-link'> &
+    websiteLinks: Attribute.Component<'shared.website-link', true> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    websiteLinks: Attribute.Component<'shared.website-link', true> &
+    seo: Attribute.Component<'shared.seo'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1060,58 +1001,6 @@ export interface ApiBusinessLineCountryBusinessLineCountry
   };
 }
 
-export interface ApiCareerCareer extends Schema.SingleType {
-  collectionName: 'careers';
-  info: {
-    singularName: 'career';
-    pluralName: 'careers';
-    displayName: 'Careers';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    Title: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    Description: Attribute.Blocks &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::career.career',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::career.career',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    localizations: Attribute.Relation<
-      'api::career.career',
-      'oneToMany',
-      'api::career.career'
-    >;
-    locale: Attribute.String;
-  };
-}
-
 export interface ApiChildLineOfBusinessChildLineOfBusiness
   extends Schema.CollectionType {
   collectionName: 'child_line_of_businesses';
@@ -1152,12 +1041,6 @@ export interface ApiChildLineOfBusinessChildLineOfBusiness
           localized: true;
         };
       }>;
-    websiteLink: Attribute.Component<'shared.website-link'> &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     fullDescription: Attribute.Blocks &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1165,6 +1048,18 @@ export interface ApiChildLineOfBusinessChildLineOfBusiness
         };
       }>;
     websiteLinks: Attribute.Component<'shared.website-link', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    seo: Attribute.Component<'shared.seo'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    PartnerCarousel: Attribute.Component<'elements.partner-logo', true> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1218,6 +1113,12 @@ export interface ApiContactUsContactUs extends Schema.CollectionType {
         };
       }>;
     ContactDetails: Attribute.Blocks &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    seo: Attribute.Component<'shared.seo'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1307,6 +1208,12 @@ export interface ApiJobModuleJobModule extends Schema.CollectionType {
         };
       }> &
       Attribute.DefaultTo<'Full Time'>;
+    seo: Attribute.Component<'shared.seo'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1366,12 +1273,6 @@ export interface ApiLandingPageLandingPage extends Schema.SingleType {
           localized: true;
         };
       }>;
-    pageSEO: Attribute.Component<'shared.seo'> &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     vmShortLinks: Attribute.Component<'elements.icon-with-text-link', true> &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1417,6 +1318,12 @@ export interface ApiLandingPageLandingPage extends Schema.SingleType {
         };
       }>;
     exploreLineOfBusinesses: Attribute.Component<'blocks.explore-our-line-of-businesses'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    seo: Attribute.Component<'shared.seo'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1498,6 +1405,12 @@ export interface ApiNewsNews extends Schema.CollectionType {
       Attribute.SetMinMaxLength<{
         maxLength: 180;
       }>;
+    seo: Attribute.Component<'shared.seo'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1520,6 +1433,7 @@ export interface ApiOurPartnerOurPartner extends Schema.SingleType {
     singularName: 'our-partner';
     pluralName: 'our-partners';
     displayName: 'Our Partner';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1531,6 +1445,12 @@ export interface ApiOurPartnerOurPartner extends Schema.SingleType {
   };
   attributes: {
     partnerItem: Attribute.Component<'elements.partner-logo', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    seo: Attribute.Component<'shared.seo'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1555,6 +1475,71 @@ export interface ApiOurPartnerOurPartner extends Schema.SingleType {
       'api::our-partner.our-partner',
       'oneToMany',
       'api::our-partner.our-partner'
+    >;
+    locale: Attribute.String;
+  };
+}
+
+export interface ApiPagePage extends Schema.CollectionType {
+  collectionName: 'pages';
+  info: {
+    singularName: 'page';
+    pluralName: 'pages';
+    displayName: 'Pages';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    Title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slug: Attribute.UID<'api::page.page', 'Title'>;
+    FullDescription: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    FeaturedImage: Attribute.Media &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    seo: Attribute.Component<'shared.seo'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::page.page',
+      'oneToMany',
+      'api::page.page'
     >;
     locale: Attribute.String;
   };
@@ -1614,58 +1599,6 @@ export interface ApiPrimaryNavigationPrimaryNavigation
   };
 }
 
-export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.SingleType {
-  collectionName: 'privacy_policies';
-  info: {
-    singularName: 'privacy-policy';
-    pluralName: 'privacy-policies';
-    displayName: 'Privacy Policy';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    Title: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    FullDescription: Attribute.Blocks &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::privacy-policy.privacy-policy',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::privacy-policy.privacy-policy',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    localizations: Attribute.Relation<
-      'api::privacy-policy.privacy-policy',
-      'oneToMany',
-      'api::privacy-policy.privacy-policy'
-    >;
-    locale: Attribute.String;
-  };
-}
-
 export interface ApiSiteConfigurationSiteConfiguration
   extends Schema.SingleType {
   collectionName: 'site_configurations';
@@ -1715,6 +1648,72 @@ export interface ApiSiteConfigurationSiteConfiguration
   };
 }
 
+export interface ApiTariqiTariqi extends Schema.CollectionType {
+  collectionName: 'tariqis';
+  info: {
+    singularName: 'tariqi';
+    pluralName: 'tariqis';
+    displayName: 'Tariqi';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    Title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    FullDescription: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    seo: Attribute.Component<'shared.seo'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::tariqi.tariqi',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::tariqi.tariqi',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::tariqi.tariqi',
+      'oneToMany',
+      'api::tariqi.tariqi'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiTestTest extends Schema.SingleType {
   collectionName: 'tests';
   info: {
@@ -1745,6 +1744,7 @@ export interface ApiTheGroupTheGroup extends Schema.SingleType {
     singularName: 'the-group';
     pluralName: 'the-groups';
     displayName: 'The Group';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1768,6 +1768,12 @@ export interface ApiTheGroupTheGroup extends Schema.SingleType {
         };
       }>;
     buttonLink: Attribute.Component<'elements.button-link'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    seo: Attribute.Component<'shared.seo'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1816,20 +1822,19 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::slugify.slug': PluginSlugifySlug;
-      'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::about-us-child.about-us-child': ApiAboutUsChildAboutUsChild;
       'api::alfardan-business.alfardan-business': ApiAlfardanBusinessAlfardanBusiness;
       'api::business-line-country.business-line-country': ApiBusinessLineCountryBusinessLineCountry;
-      'api::career.career': ApiCareerCareer;
       'api::child-line-of-business.child-line-of-business': ApiChildLineOfBusinessChildLineOfBusiness;
       'api::contact-us.contact-us': ApiContactUsContactUs;
       'api::job-module.job-module': ApiJobModuleJobModule;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::news.news': ApiNewsNews;
       'api::our-partner.our-partner': ApiOurPartnerOurPartner;
+      'api::page.page': ApiPagePage;
       'api::primary-navigation.primary-navigation': ApiPrimaryNavigationPrimaryNavigation;
-      'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::site-configuration.site-configuration': ApiSiteConfigurationSiteConfiguration;
+      'api::tariqi.tariqi': ApiTariqiTariqi;
       'api::test.test': ApiTestTest;
       'api::the-group.the-group': ApiTheGroupTheGroup;
     }
